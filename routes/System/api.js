@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var os = require("os");
-var base = "/system";
+var base = "/os";
 router.get(base + "/", (req, res, next) => {
   res.json({
     hostname: os.hostname(),
