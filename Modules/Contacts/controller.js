@@ -77,8 +77,10 @@ module.exports = {
       const deleted_contact = await ContactService.delete(id);
       console.log("workingg", deleted_contact);
       res.status(200);
+      const contacts = await ContactService.get(req.query);
       res.render("form.twig", {
         message: "Contact " + deleted_contact._id + "is Deleted successfully!",
+        cont:contacts
       });
     } catch (e) {
       throw e;
