@@ -27,6 +27,7 @@ app.use("/users", usersRouter);
 app.use("/api", require("./routes/System"));
 app.use("/api", require("./routes/Products"));
 app.use("/api", require("./Modules/Contacts"));
+app.use("/api", require("./Modules/Users"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
